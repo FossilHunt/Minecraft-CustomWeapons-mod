@@ -45,9 +45,10 @@ public class CustomWeaponsMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.DRAGONSLAYER);
             event.accept(ModItems.KUBIK);
+            event.accept(ModItems.DENSEIRON);
         }
     }
 
