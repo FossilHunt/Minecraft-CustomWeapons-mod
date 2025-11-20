@@ -20,6 +20,7 @@ public class ModCreativeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.DRAGONSLAYER.get());
                         pOutput.accept(ModItems.KUBIK.get());
+                        pOutput.accept(ModItems.REVENANTHAMMER.get());
                         pOutput.accept(ModItems.DENSEIRON.get());
                     })
                     .build());

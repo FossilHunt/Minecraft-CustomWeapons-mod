@@ -1,6 +1,7 @@
 package net.teunis.customweaponsmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,6 +13,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.teunis.customweaponsmod.entity.ModEntities;
+import net.teunis.customweaponsmod.entity.client.RevenantRenderer;
 import net.teunis.customweaponsmod.item.ModCreativeTabs;
 import net.teunis.customweaponsmod.item.ModItems;
 import org.slf4j.Logger;
@@ -31,6 +34,8 @@ public class CustomWeaponsMod
 
         ModItems.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -49,6 +54,7 @@ public class CustomWeaponsMod
             event.accept(ModItems.DRAGONSLAYER);
             event.accept(ModItems.KUBIK);
             event.accept(ModItems.DENSEIRON);
+            event.accept(ModItems.REVENANTHAMMER);
         }
     }
 
@@ -62,9 +68,8 @@ public class CustomWeaponsMod
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.REVENANT.get(), RevenantRenderer::new);
         }
     }
 }
