@@ -22,6 +22,7 @@ public class ModCreativeTabs {
                         pOutput.accept(ModItems.KUBIK.get());
                         pOutput.accept(ModItems.REVENANTHAMMER.get());
                         pOutput.accept(ModItems.DENSEIRON.get());
+                        pOutput.accept(ModItems.REVENANTHAMMER.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

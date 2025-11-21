@@ -4,5 +4,6 @@
   "item.customweaponsmod.denseiron": "Dense Iron",
   "creativetab.weapons_tab": "Custom Weapons",
   "item.customweaponsmod.revenanthammer": "Revenant's Hammer",
-  "entity.customweaponsmod.revenant": "Iron Revenant"
+  "entity.customweaponsmod.revenant": "Iron Revenant",
+  "item.customweaponsmod.revenant_spawn_egg": "Revenant Spawn Egg"
 }
